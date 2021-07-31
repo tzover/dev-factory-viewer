@@ -1,0 +1,48 @@
+version: '3.3'
+services:
+  front:
+    image: ${PROJ_NAME}-front:latest
+    container_name: ${PROJ_NAME}-front
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    volumes:
+      - ./front/app:/home/app
+      - /home/app/node_modules
+    ports:
+      - ${FRONT_PORT}:3000
+    tty: true
+
+  back:
+    image: ${PROJ_NAME}-back:latest
+    container_name: ${PROJ_NAME}-back
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    volumes:
+      - ./back/app:/go/src/app
+    ports:
+      - ${BACK_PORT}:${BACK_PORT}
+    depends_on:
+      - postgre
+    tty: true
+
+  postgre:
+    image: ${PROJ_NAME}-db:latest
+    container_name: ${PROJ_NAME}-db
+    build:
+      context: ./postgre
+      dockerfile: Dockerfile
+    volumes:
+      - ./postgre/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      # - ./postgre/db:/var/lib/postgresql/data
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+  
+volumes:
+  front-volume:
+    name: ${PROJ_NAME}-volume
+    driver: local
