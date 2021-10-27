@@ -11,7 +11,7 @@ const Home: NextPage = () => {
 
   return (
     <DefaultLayout title={title} subTitle={subTitle}>
-      <div className='flex flex-wrap justify-center items-center w-screen mt-5'>
+      <div className='flex flex-wrap justify-center items-center w-screen'>
         {mainMenuItems.map((item) => (
           <Card key={item.path} path={item.path}>
             <div className='flex flex-col items-center justify-center h-80 text-black'>

@@ -5,12 +5,14 @@ import React from 'react'
 interface Props {
   children: ReactNode
   path?: string
+  menu?: string
 }
 
 const Card: React.FC<Props> = (props) => {
-  const { children, path } = props
+  const { children, path, menu } = props
   const router = useRouter()
   const onClickCard = () => {
+    if (menu === 'monitoring') return
     router.push(`/${path}`)
   }
   return (
