@@ -19,7 +19,7 @@ export default SubTitle
 // Styled-Components
 const TextTitle: React.FC = styled.h2`
   padding: 1rem;
-  margin: 1rem 3rem;
+  margin: 2rem 1rem 1rem 5rem;
   font-size: 2rem;
   letter-spacing: 0.5rem;
   color: black;

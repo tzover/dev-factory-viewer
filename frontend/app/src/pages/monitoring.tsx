@@ -1,14 +1,13 @@
 import type { NextPage } from 'next'
-import SubTitle from '../components/atoms/SubTitle'
 import DefaultLayout from '../components/templates/DefaultLayout'
 
 const Monitoring: NextPage = () => {
   const title = 'Monitoring'
+  const subTitle = 'Factory Monitor'
 
-  console
   return (
-    <DefaultLayout title={title}>
-      <SubTitle subTitle={title} />
+    <DefaultLayout title={title} subTitle={subTitle}>
+      <h1>Monitoring ...</h1>
     </DefaultLayout>
   )
 }
