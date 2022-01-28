@@ -7,7 +7,7 @@ import Footer from './components/organisms/Footer'
 
 // initialize
 const appName: string = 'Factory Viewer'
-const creater: string = '© AsnEdgeCloudTeam - 2021'
+const creater: string = '© 2021'
 
 // Main
 const App: React.FC = () => (

@@ -23,7 +23,7 @@ const HeaderArea = styled.div`
   top: 0;
   z-index: 1;
 `
-const HeaderImg = styled.img`
+const HeaderImg = styled.div`
   width: 15%;
   margin: 1em;
   padding: 1em;
@@ -47,7 +47,8 @@ const Header: React.FC<HeaderIF> = ({ title }) => {
 
   return (
     <HeaderArea>
-      <HeaderImg src={logo} alt='Aisin' onClick={onClickImage} />
+      
+      <HeaderImg onClick={onClickImage} >TopPage</HeaderImg>
       <HeaderTitleArea>
         <HeaderTitleText>{title}</HeaderTitleText>
       </HeaderTitleArea>

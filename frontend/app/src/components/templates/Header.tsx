@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/dist/client/router'
@@ -23,14 +22,7 @@ const Header: React.FC<Props> = (props) => {
         <nav className='bg-blue-100 w-screen'>
           <div className='flex items-center pl-8 h-20'>
             <div className='mr-10'>
-              <Image
-                className=''
-                src='/aisin.svg'
-                alt='Aisin'
-                width={150}
-                height={45}
-                onClick={() => router.push('/')}
-              />
+              <div className="w-1/4 h-10" onClick={() => router.push('/')}>TopPage</div>
             </div>
             <div className='flex-1'>
               <h1 className='text-center text-black text-2xl font-bold tracking-widest'>

@@ -1,5 +1,5 @@
 export const appName = 'Factory Viewer'
-export const place = '南棟'
+export const place = 'place 1'
 export const menuItems = [
   { jp: 'ホーム', en: 'Home', path: '' },
   { jp: '工場見学', en: 'Monitoring', path: 'monitoring' },
@@ -7,7 +7,7 @@ export const menuItems = [
   { jp: '生産計画', en: 'Production Plan', path: 'prod-plan' },
   { jp: '不良MAP', en: 'Defective Map', path: 'defective-map' },
 ]
-export const creater = '© Aisin Edge Cloud Team - 2021'
+export const creater = '© 2021'
 
 export const monitorDemo = {
   monitors: [
